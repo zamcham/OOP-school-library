@@ -1,3 +1,6 @@
+require_relative 'decorator'
+require_relative 'nameable'
+
 class Person
   # automatically generates getter methods for each variable.
   attr_accessor :name, :age
