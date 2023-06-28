@@ -1,4 +1,4 @@
-class Person
+class Person < Nameable
   # automatically generates getter methods for each variable.
   attr_accessor :name, :age
   attr_reader :id
@@ -14,6 +14,11 @@ class Person
 
   def can_use_services?
     of_age? || @parent_permission
+  end
+
+  # Implementing correct_name method from Nameable
+  def correct_name
+    name
   end
 
   private
