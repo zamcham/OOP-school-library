@@ -1,3 +1,6 @@
+require_relative 'decorator'
+require_relative 'nameable'
+
 class Person < Nameable
   # automatically generates getter methods for each variable.
   attr_accessor :name, :age
@@ -8,6 +11,7 @@ class Person < Nameable
     @name = name
     @age = age
     @parent_permission = parent_permission
+    super()
   end
 
   # Setters
