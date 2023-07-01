@@ -2,36 +2,33 @@ require_relative 'decorator'
 require_relative 'nameable'
 
 class Person < Nameable
-  # automatically generates getter methods for each variable.
-  attr_accessor :name, :age
+  attr_accessor :name, :age, :rentals
   attr_reader :id
 
-  def initialize(id, name: 'Unknown', age: nil, parent_permission: true)
-    @id = id
+  def initialize(age, name = 'Unknown', parent_permission: true)
+    super()
+    @id = rand(1..1000)
     @name = name
     @age = age
     @parent_permission = parent_permission
-    super()
+    @rentals = []
   end
-
-  # Setters
 
   def can_use_services?
     of_age? || @parent_permission
   end
 
-  # Implementing correct_name method from Nameable
   def correct_name
-    name
+    @name
   end
 
-  def add_rental(book, date)
-    Rental.new(date, self, book)
+  def add_rental(person, date)
+    Rental.new(self, person, date)
   end
 
   private
 
   def of_age?
-    @age.to_i >= 18
+    @age >= 18
   end
 end
