@@ -49,7 +49,7 @@ class App
     elsif res == 2
       print 'Enter the teacher\'s specialization: '
       specialization = gets.chomp
-      person = Teacher.new(nil, specialization, name: name, age: age)
+      person = Teacher.new(age, specialization, name)
       puts "Teacher created successfully. Name: #{person.name}, ID: #{person.id}"
     else
       puts 'Invalid choice. Person creation failed.'
