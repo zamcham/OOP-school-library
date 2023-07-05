@@ -16,6 +16,7 @@
   - [Install](#install)
   - [Usage](#usage)
 - [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
@@ -100,6 +101,18 @@ Navigate to the repository and run `ruby main.rb`
 - GitHub: [@haftamudesta](https://github.com/haftamudesta)
 - Twitter: [@DestaHftamu](https://twitter.com/DestaHftamu)
 - LinkedIn: [Cristian Zambrano](https://linkedin.com/in/haftamu-desta)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> The following are the future features that will be added to the project.
+
+- [ ] **It will preserve data in the future**
+- [ ] **I will add unit test**
+- [ ] **It will probably not take over the world**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
