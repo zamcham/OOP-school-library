@@ -81,6 +81,7 @@ Once you have ruby installed, run this command to start writing in ruby.
 ```sh
   irb
 ```
+Navigate to the repository and run `ruby main.rb`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -94,7 +95,7 @@ Once you have ruby installed, run this command to start writing in ruby.
 - Twitter: [@ZamChamGames](https://twitter.com/zamchamgames)
 - LinkedIn: [Cristian Zambrano](https://www.linkedin.com/in/cristian-zamcham/)
 
-👤 **Haftamu Deesta**
+👤 **Haftamu Desta**
 
 - GitHub: [@haftamudesta](https://github.com/haftamudesta)
 - Twitter: [@DestaHftamu](https://twitter.com/DestaHftamu)
