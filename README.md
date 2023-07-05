@@ -86,13 +86,19 @@ Once you have ruby installed, run this command to start writing in ruby.
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 👤 **Cristian Zambrano**
 
 - GitHub: [@zamcham](https://github.com/zamcham)
 - Twitter: [@ZamChamGames](https://twitter.com/zamchamgames)
 - LinkedIn: [Cristian Zambrano](https://www.linkedin.com/in/cristian-zamcham/)
+
+👤 **Haftamu Deesta**
+
+- GitHub: [@haftamudesta](https://github.com/haftamudesta)
+- Twitter: [@DestaHftamu](https://twitter.com/DestaHftamu)
+- LinkedIn: [Cristian Zambrano](https://linkedin.com/in/haftamu-desta)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
