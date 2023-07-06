@@ -40,8 +40,9 @@ class DataManager
   end
 
   def load_student(item)
-    Student.new(item['age'], item['classroom'], item['name'], parent_permission: item['parent_permission'], id: item['id'].to_i)
-  end  
+    Student.new(item['age'], item['classroom'], item['name'], parent_permission: item['parent_permission'],
+                                                              id: item['id'].to_i)
+  end
 
   def load_teacher(item)
     Teacher.new(item['age'], item['specialization'], item['name'], id: item['id'].to_i)
