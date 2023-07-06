@@ -2,8 +2,8 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'book'
 require_relative 'rental'
-require 'json'
 require_relative 'data_manager'
+require 'json'
 
 class App
   attr_accessor :people, :books, :rentals
