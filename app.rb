@@ -2,6 +2,8 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'book'
 require_relative 'rental'
+require_relative 'data_manager'
+require 'json'
 
 class App
   attr_accessor :people, :books, :rentals
@@ -10,6 +12,7 @@ class App
     @people = []
     @books = []
     @rentals = []
+    @data_manager = DataManager.new(self)
   end
 
   def list_all_books
@@ -121,6 +124,11 @@ class App
   end
 
   def quit
+    @data_manager.save_data_to_files
     false
+  end
+
+  def load_data_from_files
+    @data_manager.load_data_from_files
   end
 end
