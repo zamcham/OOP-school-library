@@ -2,6 +2,7 @@ require_relative 'student'
 require_relative 'teacher'
 require_relative 'book'
 require_relative 'rental'
+require 'json'
 
 class App
   attr_accessor :people, :books, :rentals
@@ -121,6 +122,83 @@ class App
   end
 
   def quit
+    save_data_to_files
     false
+  end
+
+  def save_data_to_files
+    save_to_json('people.json', serialize_people)
+    save_to_json('books.json', serialize_books)
+    save_to_json('rentals.json', serialize_rentals)
+  end
+
+  def save_to_json(filename, data)
+    File.open(filename, 'w') do |file|
+      file.write(JSON.generate(data))
+    end
+    puts "Data saved to #{filename}."
+  end
+
+  def load_data_from_files
+    @people = load_from_json('people.json')
+    @books = load_from_json('books.json')
+    @rentals = load_from_json('rentals.json')
+  end
+
+  def load_from_json(filename)
+    return [] unless File.exist?(filename)
+
+    JSON.parse(File.read(filename)).map do |item|
+      case item['type']
+      when 'Student'
+        Student.new(item['age'], item['name'], parent_permission: item['parent_permission'])
+      when 'Teacher'
+        Teacher.new(item['age'], item['specialization'], item['name'], parent_permission: item['parent_permission'])
+      when 'Book'
+        Book.new(item['title'], item['author'])
+      when 'Rental'
+        book = @books.find { |b| b.title == item['book_title'] }
+        person = @people.find { |p| p.id == item['person_id'] }
+        Rental.new(book, person, item['date'])
+      end
+    end
+  end
+
+  def serialize_people
+    @people.map do |person|
+      serialized_person = {
+        'type' => person.class.name,
+        'age' => person.age,
+        'id' => person.id,
+        'name' => person.name
+      }
+      if person.is_a?(Student)
+        serialized_person['parent_permission'] = person.parent_permission
+      elsif person.is_a?(Teacher)
+        serialized_person['specialization'] = person.specialization
+      end
+      serialized_person
+    end
+  end
+
+  def serialize_books
+    @books.map do |book|
+      {
+        'type' => book.class.name,
+        'title' => book.title,
+        'author' => book.author
+      }
+    end
+  end
+
+  def serialize_rentals
+    @rentals.map do |rental|
+      {
+        'type' => rental.class.name,
+        'book_title' => rental.book.title,
+        'person_id' => rental.person.id,
+        'date' => rental.date
+      }
+    end
   end
 end
