@@ -133,9 +133,7 @@ class App
   end
 
   def save_to_json(filename, data)
-    File.open(filename, 'w') do |file|
-      file.write(JSON.generate(data))
-    end
+    File.write(filename, JSON.generate(data))
     puts "Data saved to #{filename}."
   end
 
