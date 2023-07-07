@@ -20,4 +20,5 @@ class Main
   end
 end
 
-Main.new.run
+# Run the application if executed directly
+Main.new.run if $PROGRAM_NAME == __FILE__

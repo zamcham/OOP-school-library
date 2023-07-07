@@ -6,7 +6,7 @@ class Rental
   def initialize(book, person, date)
     @book = book
     @person = person
-    @date = Date.parse(date)
+    @date = date
     book.rentals << self
     person.rentals << self
   end
