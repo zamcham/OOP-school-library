@@ -8,6 +8,7 @@ class Main
   end
 
   def run
+    @app.load_data_from_files
     loop do
       @menu.display
       choice = gets.chomp.to_i
