@@ -100,7 +100,7 @@ Navigate to the repository and run `ruby main.rb`
 
 - GitHub: [@haftamudesta](https://github.com/haftamudesta)
 - Twitter: [@DestaHftamu](https://twitter.com/DestaHftamu)
-- LinkedIn: [Haftamu Desta](https://linkedin.com/in/haftamu-desta)
+- LinkedIn: [Cristian Zambrano](https://linkedin.com/in/haftamu-desta)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
