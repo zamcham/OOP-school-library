@@ -57,7 +57,7 @@ First, you need to ensure that you have Ruby installed on your computer.
 
 ### Setup
 
-It varies depending on your operating system so here are some links to help you install it on [Windows](https://gorails.com/setup/windows/10) and on [Ubuntu](https://www.ruby-lang.org/en/documentation/installation/#apt). 
+Depending on your operating system so here are some links to help you install it on [Windows](https://gorails.com/setup/windows/10) and on [Ubuntu](https://www.ruby-lang.org/en/documentation/installation/#apt). 
 
 For MacOS run the following commands
 
