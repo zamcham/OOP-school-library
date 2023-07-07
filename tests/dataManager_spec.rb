@@ -18,7 +18,7 @@ RSpec.describe DataManager do
     allow(app).to receive(:books).and_return(books)
     allow(app).to receive(:rentals).and_return(rentals)
   end
-  
+
   describe '#load_from_json' do
     it 'returns an empty array if the file does not exist' do
       filename = 'nonexistent.json'
