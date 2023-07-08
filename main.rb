@@ -8,6 +8,7 @@ class Main
   end
 
   def run
+    @app.load_data_from_files
     loop do
       @menu.display
       choice = gets.chomp.to_i
@@ -19,5 +20,4 @@ class Main
   end
 end
 
-# Run the application if executed directly
-Main.new.run if $PROGRAM_NAME == __FILE__
+Main.new.run

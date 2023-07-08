@@ -1,5 +1,6 @@
 require_relative '../nameable'
 require_relative '../decorator'
+require_relative '../data_manager'
 require 'rspec'
 
 class TestNameable
